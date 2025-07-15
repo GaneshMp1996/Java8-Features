@@ -25,6 +25,7 @@ public class ThirdHighestNumberTest {
 
         // Print the result
         System.out.println("Expected: " + expectedTopThree);
+        System.out.println("************************");
         System.out.println("Actual: " + actualTopThree);
         // Assert the result
         assertEquals(expectedTopThree, actualTopThree, "The top three numbers should match the expected result.");

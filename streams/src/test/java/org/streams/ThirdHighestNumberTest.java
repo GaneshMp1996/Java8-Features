@@ -1,12 +1,11 @@
 package org.streams;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.util.Arrays;
 import java.util.List;
-
-import static org.junit.jupiter.api.Assertions.assertEquals;
-
+import java.util.stream.Collectors;
 
 public class ThirdHighestNumberTest {
 
@@ -21,8 +20,8 @@ public class ThirdHighestNumberTest {
         // Actual output using Java 8 features
         List<Integer> actualTopThree = numbers.stream()
                 .sorted((a, b) -> Integer.compare(b, a)) // Sort in descending order
-                .limit(3)                               // Take the first 3 elements
-                .collect(java.util.stream.Collectors.toList());
+                .limit(3)
+                .collect(Collectors.toList());
 
         // Assert the result
         assertEquals(expectedTopThree, actualTopThree, "The top three numbers should match the expected result.");

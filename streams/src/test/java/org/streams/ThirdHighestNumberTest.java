@@ -23,6 +23,9 @@ public class ThirdHighestNumberTest {
                 .limit(3)
                 .collect(Collectors.toList());
 
+        // Print the result
+        System.out.println("Expected: " + expectedTopThree);
+        System.out.println("Actual: " + actualTopThree);
         // Assert the result
         assertEquals(expectedTopThree, actualTopThree, "The top three numbers should match the expected result.");
     }
